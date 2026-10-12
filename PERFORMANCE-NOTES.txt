@@ -1,0 +1,15 @@
+VÉRONA v1.4 — targeted performance pass
+
+Changes in this revision:
+- Google Fonts stylesheet is preloaded asynchronously with display=swap retained.
+- Above-the-fold hero images are preloaded with high fetch priority.
+- Large hero/collection image requests were reduced to more appropriate widths/quality settings.
+
+Deliberately unchanged:
+- Visual layout and typography choices.
+- Web3Forms contact/reservation integration.
+- Existing external image sources (no visual asset replacement).
+- Main JS interactions.
+
+The PageSpeed cache-lifetime warning may still report third-party resources because their cache headers are controlled by the external host, not VÉRONA/Netlify.
+The CSS minification warning is low impact at this project size and was left readable for maintainability.
